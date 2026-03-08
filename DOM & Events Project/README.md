@@ -15,7 +15,7 @@ Clone the repository:
 1. Git Bash → git clone <repo-url>
 2. Open index.html in your browser. Alternatively use "Live Preview" extension on Visual Studio Code. 
 
-## What I Learned
+## What I Reviewed
 
 * Working with string manipulation in JavaScript
 * Implementing a basic Caesar Cipher algorithm
