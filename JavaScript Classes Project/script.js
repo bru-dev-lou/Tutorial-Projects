@@ -27,11 +27,37 @@ class Pet {constructor (id){
 }
 
 const pet1 = new Pet (1);
+const pet2 = new Pet (2);
 
 function feedPet(amount) {
-  pet1.feed(amount); 
+  if (selectedPet === 1) {
+    pet1.feed(amount); 
+  }
+  else if (selectedPet === 2) {
+    pet2.feed(amount);
+  }
 }
 
 setInterval(function(){
   pet1.decreaseFedLevel();
+  pet2.decreaseFedLevel();
 }, 5000);
+
+let selectedPet = null;
+const pet1Element = document.getElementById("pet1");
+const pet2Element = document.getElementById("pet2");
+
+function selectPet(id){
+ pet1Element.classList.remove("selected");
+ pet2Element.classList.remove("selected");
+ if (id === 1) {
+  pet1Element.classList.add("selected");
+  selectedPet = 1;
+ }
+ else if (id === 2) {
+  pet2Element.classList.add("selected");
+  selectedPet = 2;
+ }
+}
+
+selectPet(1); 
